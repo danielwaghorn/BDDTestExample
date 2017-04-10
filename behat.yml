@@ -1,0 +1,20 @@
+default:
+  suites:
+    parameters:
+      url: http://localhost:5555
+      documentRoot: .
+      timeout: 5
+  formatters:
+    pretty:
+      parameters:
+        decorated:              true
+        verbose:                false
+        time:                   true
+        language:               en
+        output_path:            null
+        multiline_arguments:    true
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://localhost:5555
+      default_session: goutte
+      goutte: ~
